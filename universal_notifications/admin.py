@@ -2,7 +2,7 @@
 from django.contrib import admin
 
 from universal_notifications.models import (NotificationHistory, Phone, PhoneReceived, PhoneReceivedRaw, PhoneReceiver,
-                                            PhoneSent, UnsubscribedUser)
+                                            PhoneSent, UnsubscribedUser, Device)
 
 # TODO: think about adding django-safedelete
 
@@ -43,3 +43,4 @@ admin.site.register(PhoneReceiver, PhoneReceiverAdmin)
 admin.site.register(Phone, PhoneAdmin)
 admin.site.register(UnsubscribedUser)
 admin.site.register(NotificationHistory, NotificationHistoryAdmin)
+admin.site.register(Device)
