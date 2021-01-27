@@ -7,7 +7,10 @@ from ws4redis.publisher import RedisPublisher
 from ws4redis.redis_store import RedisMessage
 from ws4redis.subscriber import RedisSubscriber
 
-from universal_notifications.tasks import ws_received_send_signal_task
+try:
+    from universal_notifications.tasks import ws_received_send_signal_task
+except Exception:
+    pass
 
 
 def publish(user, item=None, additional_data=None):
